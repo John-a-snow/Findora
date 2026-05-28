@@ -93,5 +93,68 @@
     "isEditorPick": false,
     "isHiddenGem": false,
     "websiteUrl": "https://www.adobe.com/products/premiere.html"
+    "platformSupport": ["Windows", "macOS"],
+    "strengths": ["Perfect Adobe integration", "Industry standard workflow"]
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "logo": "MessageSquareText",
+    "description": "An audio/video editor makes as easy as editing a text document. Edit video by editing text.",
+    "bestUseCase": "Podcasts, talking-head videos, and screen recordings",
+    "pricing": "Freemium",
+    "pricingDetails": "Free up to 1 hour/month. Creator plan starts at $12/month.",
+    "fifficulty": "Beginner",
+    "category": "Video Editing",
+    "tags": ["editor", "podcast", "text-based-editing", "presentations" ],
+    "isAi": true,
+    "isMobile": false,
+    "isTrending": true,
+    "isEditorPick": true,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.descript.com",
+    "platformSupport": ["Windows", "macOS"],
+    "strengths": ["Transcribe and edit by deleting words", "Studio soung quality with one click", "AI voice cloning"]
+  },
+  {
+    "id": "photopea",
+    "name": "Photopea",
+    "logo": "Image",
+    "descritpion": "A free advanced photo editor that supports PSD, XCF, Sketch, XD and CDR formats directly in your browser.",
+    "bestUseCase": "Free web-based Photoshop alternative for quick mockups and edits",
+    "pricing": "Free",
+    "pricingDetails": "100% free with non-intrusive ads. Ad-free starts at $5/month.",
+    "difficulty": "Intermediate",
+    "category": "graphic design"
+    "tags": ["photo-editor", "web-based", "photoshop-clone", "mockups"],
+
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": true,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://www.photopea.com",
+    "platformSupport": ["Web"],
+    "strengths": ["Runs instanly in any browser", "Supports PSD layer groups and styles", "Zero installation required"]
+  },
+  {
+    "id": "vscode"
+    "name": "Visual Studio Code",
+    "logo":"Code2",
+    "description": "A lightweight but powerful source code editor that runs on your desktop and comes with rich extensions.",
+    "bestUseCase": "General purpose web development, scripting, and backend coding",
+    "pricing": "Free",
+    "pricingDetails": "Completely free and open source.",
+    "difficulty": "Intermediate",
+    "category": "Coding",
+    "tags": ["editor", "extensions", "web-dev", "ide"],
+
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": true,
+    "isHiddenGem": false,
+    "websiteUrl": "https://code.visualstudio.com",
+
 
 

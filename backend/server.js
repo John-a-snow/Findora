@@ -65,3 +65,59 @@ app.get("/api/tools", (req, res) => {
         }
 
         res.json(tools);
+      } catch (error) {
+        res.status(500).json({ error: "Failed to load load tools" });
+      }
+    });
+
+app.get("/api/workflows", (req, res) => {
+    try {
+        let workflows = getWorkflowsData();
+        const { userType, popularOnly } = req.query;
+
+        if (userType) {
+            workflows = workflows.filter(w => w.userType.toLowerCase() === userType.toLowerCase());
+        }
+
+        if (popularOnly === "true") {
+            workflows = workflows.filter(w => w.isPopular === true);
+        }
+        
+        res.json(workflows);
+      } catch (error) {
+        res.status(500).json({ error: "Failed to load workflows" });
+      }
+    });
+
+app.get("/api/workflows/:id", (req, res) => {
+    try {
+        const workflows = getWorkflowsData();
+        const workflow = workflows.find(w => w.id === req.params.id);
+        if (!workflow) {
+            return res.status(404).json({ error: "workflow not found" });
+        }
+        res.json(workflow);
+    } catch (error) {
+        res.status(500).json({ error: "Failed to load workflow" });
+    }
+});
+
+app.post("/api/search-intel", (req, res) => {
+  try {
+    const { query } = req.body;
+    if (!query) {
+        return res.status(400).json({ error: "Query is required" });
+    }
+
+    const lowerQuery = query.toLowerCase();
+    const allTools = getToolsData();
+    const allWorkflows = getWorkflowsData();
+
+    let categoryFilter = null;
+    let freeOnlyFilter = false;
+    let difficultyFilter = null;
+    let aiFilter = false;
+    let mobileFilter = false;
+    let detectedTags = [];
+
+    if (lowerQuery.includes("free") || lowerQuery.includes("without cost")
