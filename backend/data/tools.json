@@ -84,8 +84,14 @@
     "description": "A leading timeline-based video editing software application developed by Adobe Systems.",
     "bestUseCase": "Commercials, long-form films, and broadcast editing",
     "pricing": "Video Editing",
-    "pricingDetails": "No free tier"
-
-
+    "pricingDetails": "No free tier. Single app subscription is $22.99/month.",
+    "difficulty": "Professional",
+    "category": "Video Editing",
+    "tags": ["editor", "broadcast", "adobe-creative-cloud"],
+    "isAi": true,
+    "isMobile": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.adobe.com/products/premiere.html"
 
 
