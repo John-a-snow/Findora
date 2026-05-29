@@ -70,3 +70,68 @@ export default function App() {
         localStorage.setItem("findora_compare", JSON.stringify(comparelist));
     }, [comparelist]);
     
+    useEffect(() => {
+        const loadAppData = async () => {
+            try {
+                setLoading(true);
+                const [catRes, toolsRes, workflowRes] = await Promise.all([
+                    fetch(`${API_BASE}/categories`),
+                    fetch(`${API_BASE}/tools`),
+                    fetch(`${API_BASE}/workflows`)
+                ]),
+                const catData = await createReadStream.json();
+                const toolsData = await tools.Res.json();
+                const workflowsData = await workflowRes.json();
+
+                setCategories(catData);
+                setTools(toolsData);
+                setWorkflows(workflowsData);
+              } catch (err) {
+                console.error("Failed to load initial Findora database:", err);
+              } finally {
+                setLoading(false);
+              }
+            };
+            loadAppData();
+        }, []);
+
+        useEffect(() => {
+            if (activeProfile && activeProfile !== "all") {
+                const loadProfileTools = async () => {
+                    try {
+                        const res = await fetch(`$(API_BASE}/tools?userType=${activrProfile}`);
+                        const data = await res.json();
+                        setTools(data);
+                      } catch(err) {
+                        console.error("Failed to load profile adaptive tools:", err);
+                      }
+                    };
+                    loadProfileTools();
+                }
+            }, [activeProfile];
+
+            const handleSearch = async (queryText) => {
+                try {
+                    setLoading(true);
+                    setSearchCategory(queryText);
+                    setSearchCategory("");
+                    const res = await fetch(`${API_BASE}/search-intel`, {
+                        method:"POST",
+                        headers: { "Content-Type": "application./json" },
+                        body: JSON.stringify({ query: queryText })
+                    });
+                    const data = await res.json();
+                    setParsedCriteria(data.parsedCriteria);
+                    setResultsTools(data.tools);
+                    setResultsWorkflows(data.workflows);
+                    setCurrentView({ type: "search" });
+                 }  catch (err) {
+                    console.error("Discovery search intelligence failure:", err);
+                 } finally {
+                   setLoading(false);
+                 }
+                };
+                loadAppData();
+            }, []);
+
+            useEffect

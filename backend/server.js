@@ -120,4 +120,68 @@ app.post("/api/search-intel", (req, res) => {
     let mobileFilter = false;
     let detectedTags = [];
 
-    if (lowerQuery.includes("free") || lowerQuery.includes("without cost")
+    if (lowerQuery.includes("free") || lowerQuery.includes("without cost") || lowerQuery.includes("zero price")) {
+        freeOnlyFilter = true;
+    }
+
+    if (lowerQuery.includes("beginner") || lowerQuery.includes("easy") || lowerQuery.includes("simple") || lowerQuery.includes("novice")) {
+        difficultyFilter = "Beginner";
+    } else if (lowerQuery.includes("pro") || lowerQuery.includes("generator")) {
+        difficultyFilter = "professional";
+    }
+
+    if (lowerQuery.includes("ai") || lowerQuery.includes("artificial intelligence") || lowerQuery.includes("generators")) {
+        aiFilter = true;
+    }
+
+    if (lowerQuery.includes("mobile") || lowerQuery.includes("phone") || lowerQuery.includes("ios)" || lowerQuery.includes("android")) {
+        mobileFilter = true;
+    }
+
+    const categoryKeywords = {
+        "video-editing": ["video", "edit", "editor", "reel", "tiktok", "shorts", "splicing", "grading", "clip"],
+        "graphic-design": ["graphic", "design", "vector", "logo", "ui", "ux", "wireframe", "photo", "image", "drawing", "sketch", "whiteboard", "canvas"],
+        "coding": ["code", "program", "develop", "ide", "vscode", "sandbox", "interview", "algorithms", "dsa"],
+        "productivity": ["notion", "notes", "database", "organize", "tasks", "wiki", "kanban", "slack"],
+        "music-sfx": ["music", "sound", "sfx", "audio", "voice", "speech", "tts", "track", "podcast"],
+        "ai-tools": ["ai", "chatbot", "image-generator", "eraser", "phind", "removebg"],
+        "stock-assets": ["stock", "images", "photos", "micro-animations"],
+        "animation-tools": ["animation", "render", "3d", "vector animation"]
+    };
+
+    for (const [catId, keywords] of Object.entries(categoryKeywords)) {
+        if (keywords.some(k => lowerQuery.includes(k))) {
+            categoryFilter = catId;
+            break;
+        }
+    }
+
+    const tagKeywords = {
+        "reels": ["reels", "reel", "instagram"],
+        "templates": ["template", "templates"],
+        "social-media": ["social", "insta", "instagram", "tiktok"],
+        "ui-ux": ["ui", "ux", "interface", "app design"],
+        "captions": ["captions", "caption", "subtitle"],
+        "color-grading": ["color", "grading", "grade"],
+        "podcast": ["podcast", "podcasts"],
+        "interview-prep": ["algorithms", "prep", "leetcode"],
+        "algorithms": ["algorithms", "dsa", "algorithm"],
+        "notes": ["notes", "note", "notebook"],
+        "second-brain": ["second brain", "brain"],
+        "voice-cloning": ["voice clone", "cloning"],
+        "voiceover": ["voiceover", "voice", "voice-over"],
+        "whiteboard": ["whiteboard", "sketching", "excalidraw"],
+        "3d": ["3d", "blender", "modeling"]
+    };  
+
+    for (const [tag, keywords] of Object.entries(tagKeywords)) {
+        if (keywords.some(k => lowerQuery.includes(k))) {
+            detectedTags.push(tag);
+        }
+    }
+
+    let filteredTools = allTools;
+
+    if (categoryFilter) {
+        const cleanCat = categoryFilter.replace("-", " ").toLowerCase();
+        
