@@ -8,7 +8,9 @@ import Favorites from "./views/Favorites";
 import Compare from "./views/Compare";
 import AllWorkflows from "./views/AllWorkflows";
 import About from "./views/About";
+
 const API_BASE = "http://localhost:5000/api";
+
 export default function App() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("findora_theme") || "dark";
@@ -26,16 +28,19 @@ export default function App() {
     const saved = localStorage.getItem("findora_compare");
     return saved ? JSON.parse(saved) : [];
   });
+
   const [categories, setCategories] = useState([]);
   const [tools, setTools] = useState([]);
   const [workflows, setWorkflows] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const [currentView, setCurrentView] = useState({ type: "home" });
   const [searchQuery, setSearchQuery] = useState("");
   const [searchCategory, setSearchCategory] = useState("");
   const [parsedCriteria, setParsedCriteria] = useState(null);
   const [resultsTools, setResultsTools] = useState([]);
   const [resultsWorkflows, setResultsWorkflows] = useState([]);
+
   const [filters, setFilters] = useState({
     freeOnly: false,
     beginnerFriendly: false,
@@ -43,6 +48,7 @@ export default function App() {
     aiBased: false,
     mobileFriendly: false
   });
+
   useEffect(() => {
     localStorage.setItem("findora_theme", theme);
     if (theme === "dark") {
@@ -51,15 +57,19 @@ export default function App() {
       document.body.classList.remove("dark");
     }
   }, [theme]);
+
   useEffect(() => {
     localStorage.setItem("findora_favorites", JSON.stringify(favorites));
   }, [favorites]);
+
   useEffect(() => {
     localStorage.setItem("findora_saved_workflows", JSON.stringify(savedWorkflows));
   }, [savedWorkflows]);
+
   useEffect(() => {
     localStorage.setItem("findora_compare", JSON.stringify(compareList));
   }, [compareList]);
+
   useEffect(() => {
     const loadAppData = async () => {
       try {
@@ -72,6 +82,7 @@ export default function App() {
         const catData = await catRes.json();
         const toolsData = await toolsRes.json();
         const workflowsData = await workflowsRes.json();
+
         setCategories(catData);
         setTools(toolsData);
         setWorkflows(workflowsData);
@@ -83,6 +94,7 @@ export default function App() {
     };
     loadAppData();
   }, []);
+
   useEffect(() => {
     if (activeProfile && activeProfile !== "all") {
       const loadProfileTools = async () => {
@@ -97,6 +109,7 @@ export default function App() {
       loadProfileTools();
     }
   }, [activeProfile]);
+
   const handleSearch = async (queryText) => {
     try {
       setLoading(true);
@@ -121,71 +134,72 @@ export default function App() {
 
   const handleSelectCategory = async (catId) => {
     try {
-        setLoading(true);
-        const categoryData = categories.find(c => c.id === catId);
-        setSearchCategory(categoryData ? categoryData.name : catId);
-        setSearchQuery("");
-        setParsedCriteria(null);
+      setLoading(true);
+      const categoryData = categories.find(c => c.id === catId);
+      setSearchCategory(categoryData ? categoryData.name : catId);
+      setSearchQuery("");
+      setParsedCriteria(null);
 
-        const res = await fetch(`${API_BASE}/tools?category=${catId}`);
-        const data = await res.json();
-        setResultsTools(data);
-        setResultsWorkflows([]);
-        setCurrentView({ type: "search" });
-      } catch (err) {
-       console.error("Failed to fetch category tools:", err);
-      } finally {
-       setLoading(false);
+      const res = await fetch(`${API_BASE}/tools?category=${catId}`);
+      const data = await res.json();
+      setResultsTools(data);
+      setResultsWorkflows([]);
+      setCurrentView({ type: "search" });
+    } catch (err) {
+      console.error("Failed to fetch category tools:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const toggleFavorite = (toolId) => {
+    setFavorites(prev =>
+      prev.includes(toolId) ? prev.filter(id => id !== toolId) : [...prev, toolId]
+    );
+  };
+
+  const toggleWorkflowFavorite = (flowId) => {
+    setSavedWorkflows(prev =>
+      prev.includes(flowId) ? prev.filter(id => id !== flowId) : [...prev, flowId]
+    );
+  };
+
+  const toggleCompare = (toolId) => {
+    setCompareList(prev => {
+      if (prev.includes(toolId)) {
+        return prev.filter(id => id !== toolId);
       }
-    };
-    const toggleFavorite = {toolId} => {
-      setFavorites(prev =>
-        prev.includes(toolId) ? prev.filter(id => id !== toolId) : [...prev, toolId]
-      );
-    };
+      if (prev.length >= 3) {
+        alert("You can compare up to 3 tools at the same time.");
+        return prev;
+      }
+      return [...prev, toolId];
+    });
+  };
 
-    const toggleWorkflowFavourite = (flowId) => {
-        setSavedWorkflows(prev =>
-            prev.includes(flowId) ? prev.filter(id => id !== flowId): [...prev, flowId]
-        );
-    };
-
-    const toggleCompare = (toolId) => {
-        setCompareList(prev => {
-            if (prev.includes(toolId)) {
-                return prev.filter(id => id !== toolId);
-            }
-            if (prev.length >= 3) {
-                alert("You can compare up to 3 tools at the same time.");
-                return prev;
-            }
-            return [...prev, toolId];
-        });
-    };
-
-    const toggleThem = () => {
+  const toggleTheme = () => {
     setTheme(prev => (prev === "dark" ? "light" : "dark"));
   };
 
   const renderView = () => {
-    if(loading) {
+    if (loading) {
+      return (
+        <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
+          <div className="relative w-16 h-16">
+            <div className="absolute inset-0 rounded-full border-4 border-indigo-500/20"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-t-indigo-500 animate-spin"></div>
+          </div>
+          <p className="text-sm text-gray-400 font-medium font-display tracking-wider animate-pulse">
+            Analyzing database assets...
+          </p>
+        </div>
+      );
+    }
+
+    switch (currentView.type) {
+      case "home":
         return (
-            <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
-                <div className="relative w-16 h-16">
-                    <div className="absolute inset-0 rounded-full border-4 border-indigo-500/20"></div>
-                    <div className="absolute inset-0 rounded-full border-4 border border-t-indigo-500 animate-spin"></div>
-                    </div>
-                    <p className="text-sm text-gray-400 font-medium font-display tracking-wider animate-plus">
-                        Analyzing database assets...
-                    </p>
-                </div>
-            );
-        }
-            
-        switch (currentView.type) {
-            case "home":
-                return {
-                    <Home
+          <Home
             categories={categories}
             tools={tools}
             workflows={workflows}
@@ -201,44 +215,98 @@ export default function App() {
             toggleCompare={toggleCompare}
           />
         );
-    case "search":
-        return {
-            <SearchResults
-              searchQuery={searchQuery}
-              searchCategory={searchCategory}
-              parsedCriteria={parsedCriteria}
-              resultsTools={resultsTools}
-              resultsWorkflows={resultsWorkflows}
-              filters={filters}
-              setFilters={setFilters}
-              allTools={tools}
-              onSelectWorkflow={(id) => setCurrentView({ type: "workflow", id })}
-              favourites={favourites}
-              toggleFavourite={toggleFavorite}
-              compareList={compareList}
-              toggleCompare={toggleCompare}
-              onBackToHome={() => setCurrentView({ type: "home" })}
-            />
-        };
-    case "workflow":
+      case "search":
         return (
-            <WorkflowDetails
-              workflowId={currentView.id}
-              workflowsData={workflows}
-              toolsData={tools}
-              favorites={favorites}
-              toggleFavorite={toggleFavorite}
-              compareList={compareList}
-              toggleCompare={toggleCompare}
-              onBack={() => setCurrentView({ type: "home" })}
-            />
-         );                           
-    case "favourites":
+          <SearchResults
+            searchQuery={searchQuery}
+            searchCategory={searchCategory}
+            parsedCriteria={parsedCriteria}
+            resultsTools={resultsTools}
+            resultsWorkflows={resultsWorkflows}
+            filters={filters}
+            setFilters={setFilters}
+            allTools={tools}
+            onSelectWorkflow={(id) => setCurrentView({ type: "workflow", id })}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
+            compareList={compareList}
+            toggleCompare={toggleCompare}
+            onBackToHome={() => setCurrentView({ type: "home" })}
+          />
+        );
+      case "workflow":
         return (
-            <favorites
-              favorites={favorites}
-              savedWorkflows={savedWorkflows}
-              allTools={tools}
+          <WorkflowDetails
+            workflowId={currentView.id}
+            workflowsData={workflows}
+            toolsData={tools}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
+            compareList={compareList}
+            toggleCompare={toggleCompare}
+            onBack={() => setCurrentView({ type: "home" })}
+          />
+        );
+      case "favorites":
+        return (
+          <Favorites
+            favorites={favorites}
+            savedWorkflows={savedWorkflows}
+            allTools={tools}
+            allWorkflows={workflows}
+            toggleFavorite={toggleFavorite}
+            compareList={compareList}
+            toggleCompare={toggleCompare}
+            onSelectWorkflow={(id) => setCurrentView({ type: "workflow", id })}
+            onBackToHome={() => setCurrentView({ type: "home" })}
+          />
+        );
+      case "compare":
+        return (
+          <Compare
+            compareList={compareList}
+            allTools={tools}
+            toggleCompare={toggleCompare}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
+            onBackToHome={() => setCurrentView({ type: "home" })}
+          />
+        );
+      case "all-workflows":
+        return (
+          <AllWorkflows
+            workflowsData={workflows}
+            toolsData={tools}
+            onSelectWorkflow={(id) => setCurrentView({ type: "workflow", id })}
+            onBackToHome={() => setCurrentView({ type: "home" })}
+          />
+        );
+      case "about":
+        return (
+          <About
+            onBackToHome={() => setCurrentView({ type: "home" })}
+          />
+        );
+      default:
+        return <div>View error</div>;
+    }
+  };
 
-
-
+  return (
+    <div className="min-h-screen bg-transparent text-gray-200 relative overflow-hidden flex flex-col">
+      <Navbar
+        activeProfile={activeProfile}
+        setActiveProfile={setActiveProfile}
+        favoritesCount={favorites.length + savedWorkflows.length}
+        compareListCount={compareList.length}
+        currentView={currentView}
+        setCurrentView={setCurrentView}
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
+      <main className="flex-1 w-full relative">
+        {renderView()}
+      </main>
+    </div>
+  );
+}
