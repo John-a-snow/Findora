@@ -155,6 +155,52 @@
     "isEditorPick": true,
     "isHiddenGem": false,
     "websiteUrl": "https://code.visualstudio.com",
+    "platformSupport":[ "Windows", "macOS", "Linux", "Web" ],
+    "strengths": [
+      "Massive extension ecosystem",
+      "Extremely fast and responsive",
+      "Deep Git integration"
+    ]
+  },
+  { 
+    "id": "cursor",
+    "name": "Cursor AI",
+    "logo": "Terminal",
+    "description": "An AI-first code editor designed to make programming extremely fast by embedding AI directly in the editing pane.",
+    "bestUseCase": "AI-assisted coding, codebase search, and automated refactoring",
+    "pricing": "Freemium",
+    "pricingDetails": "Free tier with limits. Pro plan is $20/month.",
+    "difficulty": "Intermediate",
+    "category": "Coding",
+    "tags": [
+      "editor",
+      "ai-coding",
+      "next-gen",
+      "autocomplete"
+    ],
+    "isAi": true,
+    "isMobile": false,
+    "isTrending": true,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.cursor.com",
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "strengths": [
+      "Natural language edits across files",
+      "Understands your whole codebase",
+      "Instantly copy-paste from chat"
+    ]
+  },
+  {
+     "id": "replit",
+     "name": "Replit",
+     "logo": "Cpu"
+     "description": "A collaborative browser-based IDE that lets you build, test, and deploy applications instantly without any local setup.",
 
+     
 
 
