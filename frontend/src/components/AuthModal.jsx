@@ -16,7 +16,8 @@ export default function AuthModal({ isOpen, onClose, onLoginSuccess }) {
     setError("");
     setLoading(true);
 
-    const url = isLogin ? "http://localhost:5000/api/auth/login" : "http://localhost:5000/api/auth/register";
+    const apiBase = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
+    const url = isLogin ? `${apiBase}/auth/login` : `${apiBase}/auth/register`;
     const body = isLogin ? { username, password } : { username, password, occupation };
 
     try {
