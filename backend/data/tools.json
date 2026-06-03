@@ -1,81 +1,141 @@
 [
   {
     "id": "canva",
-    "name": "canva",
+    "name": "Canva",
+    "logo": "Palette",
     "description": "An intuitive online design platform that makes graphic design accessible to everyone with templates and drag-and-drop elements.",
-    "bestUseCases": "Quick social media graphics, presentations, and posters",
-    "Pricing": "Freemium",
-    "pricingDetails": "Free tier available. Canva Pro starts at $12.99/month. ",
+    "bestUseCase": "Quick social media graphics, presentations, and posters",
+    "pricing": "Freemium",
+    "pricingDetails": "Free tier available. Canva Pro starts at $12.99/month.",
     "difficulty": "Beginner",
-    "category": "graphic design",
-    "tags": ["design", "templates", "social media", "presentations"],
+    "category": "Graphic Design",
+    "tags": [
+      "design",
+      "templates",
+      "social-media",
+      "presentation"
+    ],
     "isAi": true,
     "isMobile": true,
     "isTrending": true,
-    "isEditorPick": true,
-    "isHideenGem": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
     "websiteUrl": "https://www.canva.com",
-    "platformSupport": ["Web", "Windows", "macOS", "iOS", "Android"],
-    "strengths": ["Huge template library", "Very simple drag-and-drop", "Built-in AI photo tools"]
+    "platformSupport": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Huge template library",
+      "Very simple drag-and-drop",
+      "Built-in AI photo tools"
+    ]
   },
   {
     "id": "figma",
-    "name": "figma",
+    "name": "Figma",
     "logo": "Framer",
     "description": "A collaborative web-based vector graphics editor and prototyping tool for modern interface design.",
-    "bestUseCases": "UI/UX design, wireframing, and real-time collaborative design systems",
-    "Pricing" :"Freemium",
-    "pricingDetails": "Free tier for individuals. Professional plan starts at $12/editor/month.",
-    "difficulty": "Intermediate",
-    "category": "graphic design",
-    "tags": ["ui-ux", "vector", "collaboration", "prototyping"],
-    "isAi": true, 
+    "bestUseCase": "UI/UX design, wireframing, and real-time collaborative design systems",
+    "pricing": "Freemium",
+    "pricingDetails": "Free tier for individuals. Professional starts at $12/editor/month.",
+    "difficulty": "Professional",
+    "category": "Graphic Design",
+    "tags": [
+      "ui-ux",
+      "vector",
+      "collaboration",
+      "prototyping"
+    ],
+    "isAi": true,
     "isMobile": false,
-    "isTrending": true,
+    "isTrending": false,
     "isEditorPick": true,
     "isHiddenGem": false,
     "websiteUrl": "https://www.figma.com",
-    "platformSupport": ["Real-time collaborative editing", "Extremely powerful vector engine", "Rich plugin ecosystem"]
+    "platformSupport": [
+      "Web",
+      "Windows",
+      "macOS"
+    ],
+    "strengths": [
+      "Real-time collaborative editing",
+      "Extremely powerful vector engine",
+      "Rich plugin ecosystem"
+    ]
   },
   {
     "id": "capcut",
-    "name": "Capcut",
+    "name": "CapCut",
     "logo": "Video",
-    "description": "An all-in-one video editing software that make it incredibly simple to create visually striking videos.",
-    "bestUseCases": "Short-form content, Reels, TikToks, and quick social media edits",
-    "Pricing": "Freemium",
+    "description": "An all-in-one video editing software that makes it incredibly simple to create visually striking videos.",
+    "bestUseCase": "Short-form content, Reels, TikToks, and quick social media edits",
+    "pricing": "Freemium",
     "pricingDetails": "Free basic features. Pro starts at $7.99/month.",
     "difficulty": "Beginner",
     "category": "Video Editing",
-    "tags": ["editor", "reels", "captions", "effects", "mobile-editing"],
+    "tags": [
+      "editor",
+      "reels",
+      "captions",
+      "effects",
+      "mobile-editing"
+    ],
     "isAi": true,
     "isMobile": true,
-    "isTrendinng": true,
+    "isTrending": true,
     "isEditorPick": false,
     "isHiddenGem": false,
-    "websiteUrl":"https": "https://www.capcut.com",
-    "platformSupport": ["Windows", "macOS", "iOS", "Android", "Web"],
-    "strengths": ["Auto-captioning in seconds", "Trendy effects and music integration", "Very easy keyframing"]
+    "websiteUrl": "https://www.capcut.com",
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "Web"
+    ],
+    "strengths": [
+      "Auto-captioning in seconds",
+      "Trendy effects and music integration",
+      "Very easy keyframing"
+    ]
   },
   {
     "id": "davinci-resolve",
     "name": "DaVinci Resolve",
-    "logo": "Video",
+    "logo": "Film",
     "description": "An industry-standard professional video editor combining editing, color correction, visual effects, and audio post-production.",
     "bestUseCase": "High-end cinematic video editing, professional color grading, and VFX",
-    "Pricing": "Freemium",
+    "pricing": "Freemium",
     "pricingDetails": "Free version is fully featured. Studio edition is a $295 one-time fee.",
     "difficulty": "Professional",
     "category": "Video Editing",
-    "tags": ["editor", "color-grading", "vfx", "audio-post"],
+    "tags": [
+      "editor",
+      "color-grading",
+      "vfx",
+      "cinematic",
+      "audio-post"
+    ],
     "isAi": true,
     "isMobile": false,
     "isTrending": true,
-    "isEditorPick": true,
+    "isEditorPick": false,
     "isHiddenGem": false,
     "websiteUrl": "https://www.blackmagicdesign.com/products/davinciresolve",
-    "platformSupport": ["Windows", "macOS", "Linux"],
-    "strengths": ["Best-in-class color grading", "Complete built-in Fairlight audio suite", "Powerful node-based workflow"]
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "strengths": [
+      "Best-in-class color grading",
+      "Complete built-in Fairlight audio suite",
+      "Powerful node-based workflow"
+    ]
   },
   {
     "id": "premiere-pro",
@@ -83,86 +143,130 @@
     "logo": "Tv",
     "description": "A leading timeline-based video editing software application developed by Adobe Systems.",
     "bestUseCase": "Commercials, long-form films, and broadcast editing",
-    "pricing": "Video Editing",
+    "pricing": "Paid",
     "pricingDetails": "No free tier. Single app subscription is $22.99/month.",
     "difficulty": "Professional",
     "category": "Video Editing",
-    "tags": ["editor", "broadcast", "adobe-creative-cloud"],
+    "tags": [
+      "editor",
+      "broadcast",
+      "adobe-creative-cloud"
+    ],
     "isAi": true,
     "isMobile": false,
+    "isTrending": false,
     "isEditorPick": false,
     "isHiddenGem": false,
-    "websiteUrl": "https://www.adobe.com/products/premiere.html"
-    "platformSupport": ["Windows", "macOS"],
-    "strengths": ["Perfect Adobe integration", "Industry standard workflow"]
+    "websiteUrl": "https://www.adobe.com/products/premiere.html",
+    "platformSupport": [
+      "Windows",
+      "macOS"
+    ],
+    "strengths": [
+      "Perfect Adobe integration",
+      "Highly customizable timeline",
+      "Industry standard workflow"
+    ]
   },
   {
     "id": "descript",
     "name": "Descript",
     "logo": "MessageSquareText",
-    "description": "An audio/video editor makes as easy as editing a text document. Edit video by editing text.",
+    "description": "An audio/video editor that makes editing as easy as editing a text document. Edit video by editing text.",
     "bestUseCase": "Podcasts, talking-head videos, and screen recordings",
     "pricing": "Freemium",
     "pricingDetails": "Free up to 1 hour/month. Creator plan starts at $12/month.",
-    "fifficulty": "Beginner",
+    "difficulty": "Beginner",
     "category": "Video Editing",
-    "tags": ["editor", "podcast", "text-based-editing", "presentations" ],
+    "tags": [
+      "editor",
+      "podcast",
+      "text-based-editing",
+      "transcription"
+    ],
     "isAi": true,
     "isMobile": false,
     "isTrending": true,
-    "isEditorPick": true,
+    "isEditorPick": false,
     "isHiddenGem": false,
     "websiteUrl": "https://www.descript.com",
-    "platformSupport": ["Windows", "macOS"],
-    "strengths": ["Transcribe and edit by deleting words", "Studio soung quality with one click", "AI voice cloning"]
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Web"
+    ],
+    "strengths": [
+      "Transcribe and edit by deleting words",
+      "Studio sound quality with one click",
+      "AI voice cloning"
+    ]
   },
   {
     "id": "photopea",
     "name": "Photopea",
     "logo": "Image",
-    "descritpion": "A free advanced photo editor that supports PSD, XCF, Sketch, XD and CDR formats directly in your browser.",
+    "description": "A free advanced photo editor that supports PSD, XCF, Sketch, XD and CDR formats directly in your browser.",
     "bestUseCase": "Free web-based Photoshop alternative for quick mockups and edits",
     "pricing": "Free",
     "pricingDetails": "100% free with non-intrusive ads. Ad-free starts at $5/month.",
     "difficulty": "Intermediate",
-    "category": "graphic design"
-    "tags": ["photo-editor", "web-based", "photoshop-clone", "mockups"],
-
+    "category": "Graphic Design",
+    "tags": [
+      "photo-editor",
+      "web-based",
+      "photoshop-clone",
+      "mockup"
+    ],
     "isAi": false,
     "isMobile": false,
-    "isTrending": true,
+    "isTrending": false,
     "isEditorPick": false,
     "isHiddenGem": true,
     "websiteUrl": "https://www.photopea.com",
-    "platformSupport": ["Web"],
-    "strengths": ["Runs instanly in any browser", "Supports PSD layer groups and styles", "Zero installation required"]
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Runs instantly in any browser",
+      "Supports PSD layer groups and styles",
+      "Zero installation required"
+    ]
   },
   {
-    "id": "vscode"
+    "id": "vscode",
     "name": "Visual Studio Code",
-    "logo":"Code2",
+    "logo": "Code2",
     "description": "A lightweight but powerful source code editor that runs on your desktop and comes with rich extensions.",
     "bestUseCase": "General purpose web development, scripting, and backend coding",
     "pricing": "Free",
-    "pricingDetails": "Completely free and open source.",
+    "pricingDetails": "Completely free and open-source.",
     "difficulty": "Intermediate",
     "category": "Coding",
-    "tags": ["editor", "extensions", "web-dev", "ide"],
-
+    "tags": [
+      "editor",
+      "extensions",
+      "web-dev",
+      "ide"
+    ],
     "isAi": false,
     "isMobile": false,
     "isTrending": false,
     "isEditorPick": true,
     "isHiddenGem": false,
     "websiteUrl": "https://code.visualstudio.com",
-    "platformSupport":[ "Windows", "macOS", "Linux", "Web" ],
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
     "strengths": [
       "Massive extension ecosystem",
       "Extremely fast and responsive",
       "Deep Git integration"
     ]
   },
-  { 
+  {
     "id": "cursor",
     "name": "Cursor AI",
     "logo": "Terminal",
@@ -192,15 +296,882 @@
     "strengths": [
       "Natural language edits across files",
       "Understands your whole codebase",
-      "Instantly copy-paste from chat"
+      "Instant copy-paste from chat"
     ]
   },
   {
-     "id": "replit",
-     "name": "Replit",
-     "logo": "Cpu"
-     "description": "A collaborative browser-based IDE that lets you build, test, and deploy applications instantly without any local setup.",
-
-     
-
-
+    "id": "replit",
+    "name": "Replit",
+    "logo": "Cpu",
+    "description": "A collaborative browser-based IDE that lets you build, test, and deploy applications instantly without any local setup.",
+    "bestUseCase": "Collaborative live-coding, quick prototyping, and zero-config deployment",
+    "pricing": "Freemium",
+    "pricingDetails": "Free basic workspace. Core starts at $10/month.",
+    "difficulty": "Beginner",
+    "category": "Coding",
+    "tags": [
+      "web-based",
+      "deployment",
+      "collaboration",
+      "sandbox"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://replit.com",
+    "platformSupport": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Zero local setup needed",
+      "Instant multiplayer coding",
+      "Deploy web projects in one click"
+    ]
+  },
+  {
+    "id": "leetcode",
+    "name": "LeetCode",
+    "logo": "Binary",
+    "description": "The ultimate platform for preparing for technical coding interviews, offering tons of algorithmic exercises.",
+    "bestUseCase": "Coding interview preparation and algorithm practice",
+    "pricing": "Freemium",
+    "pricingDetails": "Free access to most problems. Premium is $35/month.",
+    "difficulty": "Professional",
+    "category": "Coding",
+    "tags": [
+      "interview-prep",
+      "algorithms",
+      "dsa",
+      "assessment"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://leetcode.com",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Massive question catalog",
+      "Simulated company interviews",
+      "Active discussion community"
+    ]
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "logo": "BookOpen",
+    "description": "A unified workspace where you can write, plan, collaborate, and get organized. Customize tables, wikis, and notes.",
+    "bestUseCase": "Notes, database tracking, workspace wiki, and project coordination",
+    "pricing": "Freemium",
+    "pricingDetails": "Free for personal use. Plus plan is $8/user/month.",
+    "difficulty": "Beginner",
+    "category": "Productivity",
+    "tags": [
+      "notes",
+      "database",
+      "collaboration",
+      "wiki"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": true,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.notion.so",
+    "platformSupport": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Extremely flexible database structure",
+      "Clean minimalist layout",
+      "Rich templates available"
+    ]
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "logo": "GitBranch",
+    "description": "A powerful, local-first markdown note-taking app that acts as a second brain by linking files in a visual graph.",
+    "bestUseCase": "Deep research, personal knowledge management, and offline note-taking",
+    "pricing": "Free",
+    "pricingDetails": "Completely free for personal use. Sync is $4/month.",
+    "difficulty": "Professional",
+    "category": "Productivity",
+    "tags": [
+      "notes",
+      "offline",
+      "markdown",
+      "second-brain"
+    ],
+    "isAi": false,
+    "isMobile": true,
+    "isTrending": true,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://obsidian.md",
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Local-first markdown files",
+      "Interactive note connection graph",
+      "High customizability via CSS/plugins"
+    ]
+  },
+  {
+    "id": "trello",
+    "name": "Trello",
+    "logo": "Kanban",
+    "description": "A simple, flexible, and visual Kanban board system that helps teams manage projects and organize workflow steps.",
+    "bestUseCase": "Visual task tracking and lightweight project coordination",
+    "pricing": "Freemium",
+    "pricingDetails": "Free for up to 10 boards. Standard starts at $5/user/month.",
+    "difficulty": "Beginner",
+    "category": "Productivity",
+    "tags": [
+      "kanban",
+      "tasks",
+      "collaboration"
+    ],
+    "isAi": false,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://trello.com",
+    "platformSupport": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Easiest drag-and-drop boards",
+      "Immediate visual progression",
+      "Simple power-up automated rules"
+    ]
+  },
+  {
+    "id": "epidemic-sound",
+    "name": "Epidemic Sound",
+    "logo": "Music",
+    "description": "A premium royalty-free music and sound effects platform for video creators and broadcasters.",
+    "bestUseCase": "Copyright-free background music and sound design for YouTube and ads",
+    "pricing": "Paid",
+    "pricingDetails": "Personal plan starts at $9.99/month. 30-day free trial.",
+    "difficulty": "Beginner",
+    "category": "Music/SFX",
+    "tags": [
+      "music",
+      "sfx",
+      "royalty-free",
+      "youtube-assets"
+    ],
+    "isAi": false,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": true,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.epidemicsound.com",
+    "platformSupport": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Track stems download (drums/melody separate)",
+      "No copyright flags guarantee",
+      "Smart searching based on mood"
+    ]
+  },
+  {
+    "id": "pixabay-music",
+    "name": "Pixabay Music",
+    "logo": "Volume2",
+    "description": "A massive royalty-free audio library offering completely free tracks and sound effects for visual creators.",
+    "bestUseCase": "Completely free soundtracks and sound effects with zero attribution",
+    "pricing": "Free",
+    "pricingDetails": "100% free for commercial and non-commercial projects.",
+    "difficulty": "Beginner",
+    "category": "Music/SFX",
+    "tags": [
+      "music",
+      "sfx",
+      "free-assets"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://pixabay.com/music/",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Truly free commercial license",
+      "Extensive database size",
+      "Easy direct downloading"
+    ]
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "logo": "Speech",
+    "description": "The most advanced generative AI speech and voice cloning software designed to render highly realistic voices.",
+    "bestUseCase": "Voiceovers, audiobooks, talking-head translations, and digital narrator speech",
+    "pricing": "Freemium",
+    "pricingDetails": "Free tier with 10,000 characters/month. Paid starts at $5/month.",
+    "difficulty": "Beginner",
+    "category": "Music/SFX",
+    "tags": [
+      "ai",
+      "voiceover",
+      "voice-cloning",
+      "text-to-speech"
+    ],
+    "isAi": true,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": true,
+    "isHiddenGem": false,
+    "websiteUrl": "https://elevenlabs.io",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Incredibly natural human inflections",
+      "Multilingual voice synchronization",
+      "Instant custom voice cloning"
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "logo": "MessageCircleIcon",
+    "description": "A conversational AI chatbot designed by OpenAI capable of text generation, coding, brainstorming, and translation.",
+    "bestUseCase": "Copywriting, outlining, brainstorming, and general explanation",
+    "pricing": "Freemium",
+    "pricingDetails": "Free GPT-3.5 access. Plus GPT-4 plan is $20/month.",
+    "difficulty": "Beginner",
+    "category": "AI Tools",
+    "tags": [
+      "ai",
+      "chatbot",
+      "text-generation",
+      "brainstorming"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": true,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://chatgpt.com",
+    "platformSupport": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Versatile textual understanding",
+      "Highly coherent essay formatting",
+      "Advanced code execution capabilities"
+    ]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "logo": "Compass",
+    "description": "An AI image generation model hosted on Discord that generates stunning photorealistic and artistic illustrations from text.",
+    "bestUseCase": "Conceptual art, graphic illustrations, stock aesthetics, and textures",
+    "pricing": "Paid",
+    "pricingDetails": "No free tier. Standard subscription starts at $10/month.",
+    "difficulty": "Intermediate",
+    "category": "AI Tools",
+    "tags": [
+      "ai",
+      "art-generator",
+      "illustration",
+      "discord"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": true,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.midjourney.com",
+    "platformSupport": [
+      "Web",
+      "Discord"
+    ],
+    "strengths": [
+      "Unmatched photorealism rendering",
+      "Vast range of complex artistic styles",
+      "Advanced image panning and upscaling"
+    ]
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma App",
+    "logo": "Presentation",
+    "description": "An AI presentation builder that drafts gorgeous slide decks, webpages, and document briefs from a single prompt.",
+    "bestUseCase": "Quick interactive slide decks, newsletters, and briefing notes",
+    "pricing": "Freemium",
+    "pricingDetails": "Free tier with 400 credits. Plus starts at $8/month.",
+    "difficulty": "Beginner",
+    "category": "Presentation Tools",
+    "tags": [
+      "presentation",
+      "ppt",
+      "ai-design",
+      "documents"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": true,
+    "isHiddenGem": false,
+    "websiteUrl": "https://gamma.app",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Builds modern slides from raw text",
+      "Responsive interactive layouts",
+      "Exportable to PPT and PDF formats"
+    ]
+  },
+  {
+    "id": "pitch",
+    "name": "Pitch",
+    "logo": "Slideshow",
+    "description": "A collaborative presentation deck builder built to give teams a professional edge with premium layouts and animations.",
+    "bestUseCase": "Startup pitch decks, stakeholder reporting, and polished slides",
+    "pricing": "Freemium",
+    "pricingDetails": "Free basic workspace. Pro starts at $17/month.",
+    "difficulty": "Beginner",
+    "category": "Presentation Tools",
+    "tags": [
+      "presentation",
+      "ppt",
+      "collaboration",
+      "pitch-deck"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://pitch.com",
+    "platformSupport": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Premium modern layout templates",
+      "Real-time viewer analytics",
+      "Live editing collaboration"
+    ]
+  },
+  {
+    "id": "flowcv",
+    "name": "FlowCV",
+    "logo": "FileText",
+    "description": "An interactive, visual resume editor that helps users construct multi-page job-winning resumes in minutes.",
+    "bestUseCase": "Crafting clean ATS-friendly designer resumes for corporate applications",
+    "pricing": "Freemium",
+    "pricingDetails": "Free for 1 resume. Paid starts at $5/month.",
+    "difficulty": "Beginner",
+    "category": "Resume Builders",
+    "tags": [
+      "resume",
+      "job-prep",
+      "cv-builder"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://flowcv.com",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "ATS-compatible design grids",
+      "Instant style variations with toggles",
+      "Completely free single CV export"
+    ]
+  },
+  {
+    "id": "reactive-resume",
+    "name": "Reactive Resume",
+    "logo": "Briefcase",
+    "description": "A free open-source resume builder that gives users total control over their data, privacy, and layouts.",
+    "bestUseCase": "Completely free customizable CV writing with zero tracking or costs",
+    "pricing": "Free",
+    "pricingDetails": "100% free and open-source forever.",
+    "difficulty": "Beginner",
+    "category": "Resume Builders",
+    "tags": [
+      "resume",
+      "free-assets",
+      "cv-builder",
+      "open-source"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://rxresu.me",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Zero ads or paywalls",
+      "Highly customizable field groups",
+      "Supports dark/light theme printing"
+    ]
+  },
+  {
+    "id": "unsplash",
+    "name": "Unsplash",
+    "logo": "Camera",
+    "description": "A premier source of freely-usable images, containing millions of high-resolution digital photographs.",
+    "bestUseCase": "High-fidelity digital stock photography for sites and blogs",
+    "pricing": "Free",
+    "pricingDetails": "Free download license. Unsplash+ starts at $4/month.",
+    "difficulty": "Beginner",
+    "category": "Stock Assets",
+    "tags": [
+      "stock",
+      "images",
+      "photos",
+      "free-assets"
+    ],
+    "isAi": false,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://unsplash.com",
+    "platformSupport": [
+      "Web",
+      "iOS"
+    ],
+    "strengths": [
+      "Massive high-quality library",
+      "Stunning editorial photographs",
+      "API integrations inside Figma/Canva"
+    ]
+  },
+  {
+    "id": "lottiefiles",
+    "name": "LottieFiles",
+    "logo": "Sparkles",
+    "description": "A platform offering lightweight, interactive JSON/DotLottie animations for digital products and landing pages.",
+    "bestUseCase": "Adding responsive web-ready interactive micro-animations to sites",
+    "pricing": "Freemium",
+    "pricingDetails": "Free access to thousands of assets. Pro is $19/month.",
+    "difficulty": "Intermediate",
+    "category": "Stock Assets",
+    "tags": [
+      "animation",
+      "lottie",
+      "svg",
+      "web-assets"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": true,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://lottiefiles.com",
+    "platformSupport": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Ultra-lightweight vector speeds",
+      "Color editing in the browser",
+      "Native React and Flutter integrations"
+    ]
+  },
+  {
+    "id": "rive",
+    "name": "Rive",
+    "logo": "Activity",
+    "description": "A real-time interactive design and animation tool that lets you build responsive vector graphics with state machines.",
+    "bestUseCase": "Interactive game interfaces, dynamic application buttons, and stateful loops",
+    "pricing": "Freemium",
+    "pricingDetails": "Free up to 3 files. Pro starts at $24/month.",
+    "difficulty": "Professional",
+    "category": "Animation Tools",
+    "tags": [
+      "animation",
+      "interactive",
+      "state-machine",
+      "vector"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://rive.app",
+    "platformSupport": [
+      "Web",
+      "macOS",
+      "Windows"
+    ],
+    "strengths": [
+      "State machine handles interactions",
+      "Outputs are incredibly tiny files",
+      "Runs at a solid 120 FPS on screen"
+    ]
+  },
+  {
+    "id": "blender",
+    "name": "Blender",
+    "logo": "Box",
+    "description": "A free open-source 3D creation suite supporting modeling, rigging, animation, rendering, simulation, and compositing.",
+    "bestUseCase": "Professional 3D models, visual assets, game assets, and VFX",
+    "pricing": "Free",
+    "pricingDetails": "Completely free and open-source.",
+    "difficulty": "Professional",
+    "category": "Animation Tools",
+    "tags": [
+      "3d",
+      "rendering",
+      "modeling",
+      "vfx",
+      "open-source"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.blender.org",
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "strengths": [
+      "Extremely deep modeling pipeline",
+      "Fast Cycles raytracing rendering",
+      "Zero license costs for commerce"
+    ]
+  },
+  {
+    "id": "removebg",
+    "name": "Remove.bg",
+    "logo": "Eraser",
+    "description": "An AI-powered tool that removes the background of any photo automatically with high precision in one click.",
+    "bestUseCase": "Quick portrait background transparency mapping",
+    "pricing": "Freemium",
+    "pricingDetails": "Free for low-res results. HD downloads require credits.",
+    "difficulty": "Beginner",
+    "category": "AI Tools",
+    "tags": [
+      "ai",
+      "editing",
+      "images",
+      "background-removal"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.remove.bg",
+    "platformSupport": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Android"
+    ],
+    "strengths": [
+      "Instant high-precision isolation",
+      "Figma and Photoshop integrations",
+      "API batches for batch assets"
+    ]
+  },
+  {
+    "id": "flowcv-resume",
+    "name": "FlowCV (Cover Letters)",
+    "logo": "Mail",
+    "description": "An expansion of the FlowCV suite that leverages templates to construct outstanding, ATS-optimized cover letters.",
+    "bestUseCase": "Tailoring custom application cover letters for career shifts",
+    "pricing": "Freemium",
+    "pricingDetails": "Free basic draft tools.",
+    "difficulty": "Beginner",
+    "category": "Resume Builders",
+    "tags": [
+      "job-prep",
+      "resume",
+      "writing"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://flowcv.com",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Seamlessly syncs with your FlowCV resume",
+      "Beautiful typographical layouts",
+      "Instant PDF downloads"
+    ]
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "logo": "Globe",
+    "description": "An AI search engine specialized for software developers that provides answers along with related code blocks.",
+    "bestUseCase": "Debugging, library lookups, and coding synthesis",
+    "pricing": "Freemium",
+    "pricingDetails": "Free basic searches. Pro plan is $20/month.",
+    "difficulty": "Intermediate",
+    "category": "AI Tools",
+    "tags": [
+      "ai",
+      "coding-search",
+      "developer",
+      "search-engine"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://www.phind.com",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Finds recent documentation updates",
+      "Outputs clean compiler answers",
+      "Integrates references directly"
+    ]
+  },
+  {
+    "id": "audacity",
+    "name": "Audacity",
+    "logo": "Mic",
+    "description": "A free open-source multi-track audio editor and recorder designed to edit podcasts and waveforms.",
+    "bestUseCase": "Simple audio recording, splicing, and basic vocal cleanup",
+    "pricing": "Free",
+    "pricingDetails": "Completely free open-source.",
+    "difficulty": "Intermediate",
+    "category": "Music/SFX",
+    "tags": [
+      "audio",
+      "podcast",
+      "editor",
+      "open-source"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.audacityteam.org",
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "strengths": [
+      "Extremely lightweight application",
+      "Massive array of basic audio plugins",
+      "Completely free audio splicing"
+    ]
+  },
+  {
+    "id": "vlc",
+    "name": "VLC Media Player",
+    "logo": "Play",
+    "description": "A free open-source cross-platform multimedia player that plays almost all media formats and files.",
+    "bestUseCase": "Playing uncompressed high-bitrate video clips offline",
+    "pricing": "Free",
+    "pricingDetails": "100% free and open-source.",
+    "difficulty": "Beginner",
+    "category": "Productivity",
+    "tags": [
+      "player",
+      "offline",
+      "open-source"
+    ],
+    "isAi": false,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://www.videolan.org",
+    "platformSupport": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Plays absolutely any video extension",
+      "Extremely low memory footprint",
+      "Advanced sync offset tools"
+    ]
+  },
+  {
+    "id": "lottie-creator",
+    "name": "Lottie Creator",
+    "logo": "Sliders",
+    "description": "An intuitive in-browser editing tool designed to craft Lottie animations without deep After Effects training.",
+    "bestUseCase": "Rapid micro-animations and motion design in the browser",
+    "pricing": "Freemium",
+    "pricingDetails": "Free tier available.",
+    "difficulty": "Beginner",
+    "category": "Animation Tools",
+    "tags": [
+      "animation",
+      "lottie",
+      "svg",
+      "web-assets"
+    ],
+    "isAi": false,
+    "isMobile": false,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://lottiefiles.com/lottie-creator",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Simple keyframe timeline layout",
+      "Export vector graphics to JSON files",
+      "Prebuilt shapes library"
+    ]
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "logo": "MessageSquareCode",
+    "description": "A highly integrated communication hub that centralizes team channels, DMs, and third-party applications.",
+    "bestUseCase": "SaaS startup communication and remote office collaboration",
+    "pricing": "Freemium",
+    "pricingDetails": "Free history limits. Paid starts at $7.25/month.",
+    "difficulty": "Beginner",
+    "category": "Productivity",
+    "tags": [
+      "collaboration",
+      "chat",
+      "slack-integrations"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://slack.com",
+    "platformSupport": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "strengths": [
+      "Deep webhooks and API triggers",
+      "Rich multi-member channels",
+      "Huddles for voice checkins"
+    ]
+  },
+  {
+    "id": "tldraw",
+    "name": "tldraw",
+    "logo": "PenTool",
+    "description": "A delightful collaborative vector drawing canvas that runs instantly in any browser window.",
+    "bestUseCase": "Quick visual brainstorm sketches and interactive wireframing",
+    "pricing": "Free",
+    "pricingDetails": "Completely free open-source editor tool.",
+    "difficulty": "Beginner",
+    "category": "Graphic Design",
+    "tags": [
+      "design",
+      "whiteboard",
+      "canvas",
+      "collaboration"
+    ],
+    "isAi": true,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": true,
+    "websiteUrl": "https://www.tldraw.com",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "No login or registration needed",
+      "Super smooth stylus tracking",
+      "Export whiteboard grids to SVG/PNG"
+    ]
+  },
+  {
+    "id": "excalidraw",
+    "name": "Excalidraw",
+    "logo": "Pencil",
+    "description": "A virtual whiteboard that lets you easily sketch diagrams that have a hand-drawn feel.",
+    "bestUseCase": "Software design architecture maps and rapid whiteboard drafting",
+    "pricing": "Free",
+    "pricingDetails": "Free open-source web application.",
+    "difficulty": "Beginner",
+    "category": "Graphic Design",
+    "tags": [
+      "design",
+      "whiteboard",
+      "diagram",
+      "hand-drawn"
+    ],
+    "isAi": false,
+    "isMobile": true,
+    "isTrending": false,
+    "isEditorPick": false,
+    "isHiddenGem": false,
+    "websiteUrl": "https://excalidraw.com",
+    "platformSupport": [
+      "Web"
+    ],
+    "strengths": [
+      "Beautiful hand-drawn visual style",
+      "Secure end-to-end encrypted sharing",
+      "Library of visual template elements"
+    ]
+  }
+]
