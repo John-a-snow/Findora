@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as Icons from "lucide-react";
 import Navbar from "./components/Navbar";
+import AuthModal from "./components/AuthModal";
 import Home from "./views/Home";
 import SearchResults from "./views/SearchResults";
 import WorkflowDetails from "./views/WorkflowDetails";
@@ -28,6 +29,12 @@ export default function App() {
     const saved = localStorage.getItem("findora_compare");
     return saved ? JSON.parse(saved) : [];
   });
+
+  const [user, setUser] = useState(() => {
+    const saved = localStorage.getItem("findora_user");
+    return saved ? JSON.parse(saved) : null;
+  });
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const [categories, setCategories] = useState([]);
   const [tools, setTools] = useState([]);
@@ -69,6 +76,23 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem("findora_compare", JSON.stringify(compareList));
   }, [compareList]);
+
+  useEffect(() => {
+    if (user) {
+      const syncFavorites = async () => {
+        try {
+          await fetch(`${API_BASE}/users/${user.username}/favorites`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ favorites, savedWorkflows })
+          });
+        } catch (err) {
+          console.error("Failed to sync favorites with server:", err);
+        }
+      };
+      syncFavorites();
+    }
+  }, [favorites, savedWorkflows, user]);
 
   useEffect(() => {
     const loadAppData = async () => {
@@ -181,6 +205,20 @@ export default function App() {
     setTheme(prev => (prev === "dark" ? "light" : "dark"));
   };
 
+  const handleLoginSuccess = (userData) => {
+    setUser(userData);
+    localStorage.setItem("findora_user", JSON.stringify(userData));
+    setFavorites(userData.favorites || []);
+    setSavedWorkflows(userData.savedWorkflows || []);
+  };
+
+  const handleSignOut = () => {
+    setUser(null);
+    localStorage.removeItem("findora_user");
+    setFavorites([]);
+    setSavedWorkflows([]);
+  };
+
   const renderView = () => {
     if (loading) {
       return (
@@ -259,6 +297,8 @@ export default function App() {
             toggleCompare={toggleCompare}
             onSelectWorkflow={(id) => setCurrentView({ type: "workflow", id })}
             onBackToHome={() => setCurrentView({ type: "home" })}
+            user={user}
+            onOpenAuth={() => setIsAuthModalOpen(true)}
           />
         );
       case "compare":
@@ -303,10 +343,18 @@ export default function App() {
         setCurrentView={setCurrentView}
         theme={theme}
         toggleTheme={toggleTheme}
+        user={user}
+        onSignOut={handleSignOut}
+        onOpenAuthModal={() => setIsAuthModalOpen(true)}
       />
       <main className="flex-1 w-full relative">
         {renderView()}
       </main>
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        onLoginSuccess={handleLoginSuccess}
+      />
     </div>
   );
 }

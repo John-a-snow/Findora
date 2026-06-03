@@ -18,6 +18,7 @@ const loadJSON = (filename) => {
 const getToolsData = () => loadJSON("tools.json");
 const getWorkflowsData = () => loadJSON("workflows.json");
 const getCategoriesData = () => loadJSON("categories.json");
+const getUsersData = () => loadJSON("users.json");
 
 app.get("/api/categories", (req, res) => {
   try {
@@ -34,7 +35,7 @@ app.get("/api/tools", (req, res) => {
     const { category, freeOnly, difficulty, ai, mobile, userType } = req.query;
 
     if (category) {
-      tools = tools.filter(t => t.category.toLowerCase() === category.toLowerCase());
+      tools = tools.filter(t => t.category.toLowerCase().replace(/[\s/]/g, "-") === category.toLowerCase());
     }
 
     if (freeOnly === "true") {
@@ -113,6 +114,69 @@ app.get("/api/compare", (req, res) => {
   }
 });
 
+app.post("/api/auth/register", (req, res) => {
+  try {
+    const { username, password, occupation } = req.body;
+    if (!username || !password) {
+      return res.status(400).json({ error: "Username and password are required" });
+    }
+    const users = getUsersData();
+    if (users.find(u => u.username.toLowerCase() === username.toLowerCase())) {
+      return res.status(400).json({ error: "Username is already taken" });
+    }
+    const newUser = { username, password, occupation, favorites: [], savedWorkflows: [] };
+    users.push(newUser);
+    fs.writeFileSync(path.join(__dirname, "data", "users.json"), JSON.stringify(users, null, 2), "utf8");
+    res.status(201).json(newUser);
+  } catch (error) {
+    res.status(500).json({ error: "Registration failed" });
+  }
+});
+
+app.post("/api/auth/login", (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const users = getUsersData();
+    const user = users.find(u => u.username.toLowerCase() === username.toLowerCase() && u.password === password);
+    if (!user) {
+      return res.status(401).json({ error: "Invalid username or password" });
+    }
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: "Login failed" });
+  }
+});
+
+app.get("/api/users/:username/favorites", (req, res) => {
+  try {
+    const users = getUsersData();
+    const user = users.find(u => u.username.toLowerCase() === req.params.username.toLowerCase());
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    res.json({ favorites: user.favorites || [], savedWorkflows: user.savedWorkflows || [] });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to load user favorites" });
+  }
+});
+
+app.post("/api/users/:username/favorites", (req, res) => {
+  try {
+    const { favorites, savedWorkflows } = req.body;
+    const users = getUsersData();
+    const userIndex = users.findIndex(u => u.username.toLowerCase() === req.params.username.toLowerCase());
+    if (userIndex === -1) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    users[userIndex].favorites = favorites || [];
+    users[userIndex].savedWorkflows = savedWorkflows || [];
+    fs.writeFileSync(path.join(__dirname, "data", "users.json"), JSON.stringify(users, null, 2), "utf8");
+    res.json({ message: "Favorites updated successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to save user favorites" });
+  }
+});
+
 app.post("/api/search-intel", (req, res) => {
   try {
     const { query } = req.body;
@@ -156,6 +220,8 @@ app.post("/api/search-intel", (req, res) => {
       "productivity": ["notion", "notes", "database", "organize", "tasks", "wiki", "kanban", "slack"],
       "music-sfx": ["music", "sound", "sfx", "audio", "voice", "speech", "tts", "track", "podcast"],
       "ai-tools": ["ai", "chatbot", "image-generator", "eraser", "phind", "removebg"],
+      "presentation-tools": ["presentation", "ppt", "slide", "pitch"],
+      "resume-builders": ["resume", "cv", "job", "cover letter"],
       "stock-assets": ["stock", "images", "photos", "micro-animations"],
       "animation-tools": ["animation", "render", "3d", "vector animation"]
     };
