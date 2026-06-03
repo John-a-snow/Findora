@@ -1,0 +1,167 @@
+[
+  {
+    "id": "yt-creator",
+    "name": "YouTube Content Factory",
+    "description": "A seamless, high-throughput content assembly pipeline tailored for modern digital video channels, taking you from raw script to audio mastering, edit, and publishing.",
+    "userType": "Creator",
+    "steps": [
+      {
+        "role": "Script Writing & Scripting",
+        "toolId": "chatgpt",
+        "description": "Draft detailed video outlines, research topics, and write engaging audio hooks using conversational AI prompt engineering."
+      },
+      {
+        "role": "Realistic Voiceover Voice",
+        "toolId": "elevenlabs",
+        "description": "Convert written scripts into warm, professional human voice tracks using high-fidelity synthetic voice models."
+      },
+      {
+        "role": "Sound Effects & Audio Music",
+        "toolId": "epidemic-sound",
+        "description": "Sift through copyright-free sound effects and background musical loops, splitting individual instrument track stems."
+      },
+      {
+        "role": "Premium Video Splicing",
+        "toolId": "davinci-resolve",
+        "description": "Splice video assets, perform advanced color grading, sync the voice track, and export cinematic 4K video clips."
+      }
+    ],
+    "productivityBoost": "Decoupling video creation into dedicated steps saves hours. By generating audio files beforehand and mixing with pre-cleared track layers, editors avoid copyright flags and trim the visual timeline in record time.",
+    "isPopular": true
+  },
+  {
+    "id": "student-productivity",
+    "name": "Smart Academic Studio",
+    "description": "A powerful local-first information repository and study tracking setup designed to help university students manage notes, slides, and exam preparation.",
+    "userType": "Student",
+    "steps": [
+      {
+        "role": "Deep Personal Knowledge Base",
+        "toolId": "obsidian",
+        "description": "Assemble markdown reading summaries, interlink technical concepts, and browse the graphical connection web offline."
+      },
+      {
+        "role": "Shared Collaboration Databases",
+        "toolId": "notion",
+        "description": "Track task lists, homework schedules, project databases, and lecture syllabi within a unified digital workspace."
+      },
+      {
+        "role": "Instant Interactive Presentations",
+        "toolId": "gamma",
+        "description": "Generate modern, aesthetic slide decks and reading outlines from raw lecture notes using smart layout generators."
+      },
+      {
+        "role": "Job Application Preparation",
+        "toolId": "reactive-resume",
+        "description": "Draft an elegant, clean, ATS-compliant single-page curriculum vitae to submit for fast-track internship recruitment."
+      }
+    ],
+    "productivityBoost": "Linking note-taking with database tracking guarantees that lecture requirements never fall through the cracks. Using markdown saves hours of formatting time, allowing users to compile presentations instantly with AI tools.",
+    "isPopular": true
+  },
+  {
+    "id": "fullstack-dev",
+    "name": "Next-Gen Software Builder",
+    "description": "An AI-powered application build and deployment workflow that streamlines everything from code compilation and automated debugging to server hosting.",
+    "userType": "Developer",
+    "steps": [
+      {
+        "role": "AI-First Code Synthesis",
+        "toolId": "cursor",
+        "description": "Write complex multi-file React components, query models, and perform context-aware refactoring directly in the editor."
+      },
+      {
+        "role": "Technical Search & Debugging",
+        "toolId": "phind",
+        "description": "Query compiler bugs, scan technical document updates, and synthesis custom API wrappers with a developer search engine."
+      },
+      {
+        "role": "Instant Prototype Playground",
+        "toolId": "replit",
+        "description": "Spin up a collaborative staging sandboxed environment, invite testers, and deploy backend prototypes."
+      }
+    ],
+    "productivityBoost": "Writing code inside an AI-first IDE while relying on a developer-tuned search engine keeps developers in the zone. It eliminates endless browser tabs, allowing developers to deploy fully functional prototypes in minutes.",
+    "isPopular": true
+  },
+  {
+    "id": "brand-designer",
+    "name": "Agile Brand Identity Flow",
+    "description": "A collaborative graphic design workspace structure that bridges real-time whiteboard brainstorming, high-fidelity UI vector prototypes, and web micro-animations.",
+    "userType": "Designer",
+    "steps": [
+      {
+        "role": "Real-time Whiteboard Sketching",
+        "toolId": "tldraw",
+        "description": "Collaborate live with clients on raw wireframes, vector drawings, flow diagrams, and conceptual board states."
+      },
+      {
+        "role": "High-Fidelity Interface Prototypes",
+        "toolId": "figma",
+        "description": "Formulate design tokens, construct complex component libraries, and build interactive design frames."
+      },
+      {
+        "role": "Vector Product Animations",
+        "toolId": "rive",
+        "description": "Build high-performance state-machine vector animations that run natively in mobile code frameworks."
+      }
+    ],
+    "productivityBoost": "Connecting vector brainstorming boards to pixel-perfect design systems drastically reduces visual redesign circles. Moving directly into lightweight runtime animations eliminates heavy files, keeping application speeds high.",
+    "isPopular": true
+  },
+  {
+    "id": "micro-saas-launch",
+    "name": "Micro-SaaS Startup Core",
+    "description": "A highly agile startup setup focused on rapid validation, customer communication, visual collateral generation, and lightweight marketing assets.",
+    "userType": "Entrepreneur",
+    "steps": [
+      {
+        "role": "Brainstorming & Customer Chat",
+        "toolId": "chatgpt",
+        "description": "Draft cold emails, create initial pitch copy, validate target personas, and construct marketing scripts."
+      },
+      {
+        "role": "Visual Startup Collateral",
+        "toolId": "canva",
+        "description": "Design sleek digital pitch decks, social media banners, marketing materials, and logo frameworks."
+      },
+      {
+        "role": "Fast UI Interactive Prototyping",
+        "toolId": "excalidraw",
+        "description": "Map user journeys, database relations, and application architectures for initial engineer estimates."
+      },
+      {
+        "role": "Central Team Communication",
+        "toolId": "slack",
+        "description": "Set up webhook integrations, run daily updates, and coordinate dev loops in private workspace channels."
+      }
+    ],
+    "productivityBoost": "This lean workflow enables founders to bootstrap visual assets and pitch blueprints within days, bypassing high agency fees and keeping teams tightly aligned.",
+    "isPopular": true
+  },
+  {
+    "id": "short-form-reel",
+    "name": "Short-Form Creator Studio",
+    "description": "A hyper-optimized workflow optimized for TikTok, Instagram Reels, and YouTube Shorts. Focuses on speed, templates, and high click-through rates.",
+    "userType": "Creator",
+    "steps": [
+      {
+        "role": "Fast Template Mobile Splicing",
+        "toolId": "capcut",
+        "description": "Import raw mobile video clips, apply auto-generated captions, inject overlays, and add trending soundtrack beats."
+      },
+      {
+        "role": "Portrait Background Removal",
+        "toolId": "removebg",
+        "description": "Isolate subject headshots instantly to compile high-contrast floating overlay layers."
+      },
+      {
+        "role": "Attractive Video Thumbnails",
+        "toolId": "photopea",
+        "description": "Combine cut-out subjects, drop-shadow filters, and bold typography in a browser-based layered graphics tool."
+      }
+    ],
+    "productivityBoost": "Leveraging automated mobile tools allows creators to capture, edit, and publish content on the go. High-speed background removal avoids manual masking, cutting the thumbnail loop to five minutes.",
+    "isPopular": false
+  }
+]
