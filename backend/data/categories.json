@@ -1,0 +1,72 @@
+[
+  {
+    "id": "video-editing",
+    "name": "Video Editing",
+    "icon": "Video",
+    "description": "Splicing, color grading, captioning, and sound design tools for editors and filmmakers.",
+    "count": 5
+  },
+  {
+    "id": "graphic-design",
+    "name": "Graphic Design",
+    "icon": "Palette",
+    "description": "Vector illustration, web prototyping, logo design, and shared whiteboards.",
+    "count": 6
+  },
+  {
+    "id": "coding",
+    "name": "Coding",
+    "icon": "Code2",
+    "description": "Smart software IDEs, AI-assisted writing, online sandboxes, and interview prep.",
+    "count": 4
+  },
+  {
+    "id": "productivity",
+    "name": "Productivity",
+    "icon": "CheckSquare",
+    "description": "Personal databases, offline knowledge charts, local playback, and workspace tools.",
+    "count": 5
+  },
+  {
+    "id": "music-sfx",
+    "name": "Music/SFX",
+    "icon": "Music",
+    "description": "Royalty-free soundtracks, synthetic vocal generators, and sound effect archives.",
+    "count": 4
+  },
+  {
+    "id": "ai-tools",
+    "name": "AI Tools",
+    "icon": "Cpu",
+    "description": "Text generation models, photorealistic image creation, background erasers, and coding search engines.",
+    "count": 6
+  },
+  {
+    "id": "presentation-tools",
+    "name": "Presentation Tools",
+    "icon": "Presentation",
+    "description": "Slide deck builders, pitch draft generators, and shared documents.",
+    "count": 2
+  },
+  {
+    "id": "resume-builders",
+    "name": "Resume Builders",
+    "icon": "FileText",
+    "description": "ATS-compliant digital CV tools and matching cover letter templates.",
+    "count": 3
+  },
+  {
+    "id": "stock-assets",
+    "name": "Stock Assets",
+    "icon": "Image",
+    "description": "High-resolution photos, micro-animations, and web-ready SVGs.",
+    "count": 2
+  },
+  {
+    "id": "animation-tools",
+    "name": "Animation Tools",
+    "icon": "Activity",
+    "description": "State machine vectors, open-source 3D suites, and vector timelines.",
+    "count": 3
+  }
+]
