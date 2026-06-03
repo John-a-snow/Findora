@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "username": "Taksh Singh",
+    "password": "barabanki",
+    "occupation": "Student",
+    "favorites": [
+      "notion"
+    ],
+    "savedWorkflows": []
+  }
+]

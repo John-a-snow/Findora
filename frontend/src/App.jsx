@@ -10,7 +10,7 @@ import Compare from "./views/Compare";
 import AllWorkflows from "./views/AllWorkflows";
 import About from "./views/About";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
