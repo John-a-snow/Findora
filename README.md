@@ -10,14 +10,6 @@ Findora is a smart workflow tool discovery engine I built to help creators, stud
 ## Demo video
 - Demo link [here](https://drive.google.com/file/d/1E7G578Z4Fm6KtFhWQtjV7fefnDOoPqqT/view?usp=drive_link)
 
-## Live Link
-
-- Live link is [here](https://findora-u3ag.onrender.com/).
-
-## Demo video
-
-- Demo link [here](https://drive.google.com/file/d/1E7G578Z4Fm6KtFhWQtjV7fefnDOoPqqT/view?usp=drive_link)
-
 
 * **Smart Search:**
   * **Search with sentences:** You can type normal search questions (like "free tools to edit reels") instead of guessing exact keywords. The backend automatically ranks and finds the best tools for you.
