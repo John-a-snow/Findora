@@ -5,7 +5,7 @@
 Findora is a smart workflow tool discovery engine I built to help creators, students, developers, designers, and entrepreneurs find the best websites, software, and interconnected productivity pipelines. You can also sign up for an account to save your bookmarked tools and pipelines directly to a database, and switch between light and dark mode instantly.
 
 ## Live Link
-- Live link is [here](https://findora-u3ag.onrender.com/).
+- Live link is [here](https://findora-bay.vercel.app/).
 
 ## Demo video
 - Demo link [here](https://drive.google.com/file/d/1E7G578Z4Fm6KtFhWQtjV7fefnDOoPqqT/view?usp=drive_link)
